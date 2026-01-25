@@ -1,0 +1,10 @@
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm32-unknown-unknown\wasm-dev\deps\gloo_utils-740e85a629f1c7d3.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm32-unknown-unknown\wasm-dev\deps\libgloo_utils-740e85a629f1c7d3.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm32-unknown-unknown\wasm-dev\deps\libgloo_utils-740e85a629f1c7d3.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs:

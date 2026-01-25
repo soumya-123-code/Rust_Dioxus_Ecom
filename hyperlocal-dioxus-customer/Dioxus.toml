@@ -1,0 +1,12 @@
+[application]
+name = "hyperlocal_dioxus_customer"
+default_platform = "web"
+
+[web.app]
+title = "HyperLocal Dioxus Customer"
+
+[web.watcher]
+reload_html = true
+
+[web.server]
+port = 8081

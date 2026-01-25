@@ -1,0 +1,14 @@
+D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm-dev\deps\serde-5adffa10e8de249d.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm-dev\build\serde-11d8c847cf092b35\out/private.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm-dev\deps\libserde-5adffa10e8de249d.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm-dev\build\serde-11d8c847cf092b35\out/private.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm-dev\deps\libserde-5adffa10e8de249d.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm-dev\build\serde-11d8c847cf092b35\out/private.rs
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs:
+D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm-dev\build\serde-11d8c847cf092b35\out/private.rs:
+
+# env-dep:OUT_DIR=D:\\projects\\Rust_React_MultiVendor\\6mart\\hyperlocal-dioxus\\target\\wasm-dev\\build\\serde-11d8c847cf092b35\\out

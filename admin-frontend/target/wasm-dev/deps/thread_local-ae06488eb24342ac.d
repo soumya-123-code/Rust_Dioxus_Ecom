@@ -1,0 +1,10 @@
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm-dev\deps\thread_local-ae06488eb24342ac.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\cached.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\thread_id.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\unreachable.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm-dev\deps\libthread_local-ae06488eb24342ac.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\cached.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\thread_id.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\unreachable.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm-dev\deps\libthread_local-ae06488eb24342ac.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\cached.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\thread_id.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\unreachable.rs
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\cached.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\thread_id.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\thread_local-1.1.9\src\unreachable.rs:

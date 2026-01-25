@@ -1,0 +1,22 @@
+{
+    "version": "1.0.2",
+    "min_app_version": "1.0.0",
+    "notes": "Updated UI for system updates.",
+    "run_migrations": false,
+    "run_seeders": false,
+    "vendor_update": false,
+    "actions": [
+        {
+            "type": "delete",
+            "source": "routes/dd-route.php",
+            "target": "routes/dd-route.php"
+        }
+    ],
+    "commands": [
+        "config:cache",
+        "config:clear",
+        "route:clear",
+        "view:cache",
+        "view:clear"
+    ]
+}

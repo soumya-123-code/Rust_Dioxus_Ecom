@@ -1,0 +1,45 @@
+pub mod splash;
+pub mod login;
+pub mod register;
+pub mod home;
+pub mod cart;
+pub mod product_detail;
+pub mod product_listing;
+
+// Stub pages for remaining routes
+pub mod categories;
+pub mod account;
+pub mod address_list;
+pub mod payment_options;
+pub mod my_orders;
+pub mod order_detail;
+pub mod wallet;
+pub mod wishlist;
+pub mod search;
+pub mod user_profile;
+pub mod near_by_stores;
+pub mod near_by_store_details;
+pub mod intro_slider;
+pub mod otp_verification;
+
+pub use splash::*;
+pub use login::*;
+pub use register::*;
+pub use home::*;
+pub use cart::*;
+pub use product_detail::*;
+pub use product_listing::*;
+pub use categories::*;
+pub use account::*;
+pub use address_list::*;
+pub use payment_options::*;
+pub use my_orders::*;
+pub use order_detail::*;
+pub use wallet::*;
+pub use wishlist::*;
+pub use search::*;
+pub use user_profile::*;
+pub use near_by_stores::*;
+pub use near_by_store_details::*;
+pub use intro_slider::*;
+pub use otp_verification::*;

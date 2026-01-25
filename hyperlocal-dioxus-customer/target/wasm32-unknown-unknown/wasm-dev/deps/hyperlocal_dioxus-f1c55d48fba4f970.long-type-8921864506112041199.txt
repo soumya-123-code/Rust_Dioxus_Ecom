@@ -1,0 +1,1 @@
+ListenerCallback<MouseData>: SuperFrom<std::option::Option<Callback<dioxus::prelude::Event<MouseData>>>, _>

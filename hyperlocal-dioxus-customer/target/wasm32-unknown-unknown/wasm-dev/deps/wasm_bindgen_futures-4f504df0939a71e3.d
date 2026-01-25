@@ -1,0 +1,9 @@
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\wasm_bindgen_futures-4f504df0939a71e3.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\queue.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\task\singlethread.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libwasm_bindgen_futures-4f504df0939a71e3.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\queue.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\task\singlethread.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libwasm_bindgen_futures-4f504df0939a71e3.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\queue.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\task\singlethread.rs
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\queue.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\wasm-bindgen-futures-0.4.58\src\task\singlethread.rs:

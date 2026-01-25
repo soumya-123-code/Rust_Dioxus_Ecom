@@ -1,0 +1,10 @@
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\smallbox-ff2379473594cc52.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\smallbox.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\space.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\sptr.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libsmallbox-ff2379473594cc52.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\smallbox.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\space.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\sptr.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libsmallbox-ff2379473594cc52.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\smallbox.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\space.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\sptr.rs
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\smallbox.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\space.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\smallbox-0.8.8\src\sptr.rs:

@@ -1,0 +1,10 @@
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\gloo_utils-7fddb18502ddca1c.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libgloo_utils-7fddb18502ddca1c.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libgloo_utils-7fddb18502ddca1c.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\errors.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\iter.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\gloo-utils-0.2.0\src\format\json.rs:

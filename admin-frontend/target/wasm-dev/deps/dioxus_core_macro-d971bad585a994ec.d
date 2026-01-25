@@ -1,0 +1,9 @@
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm-dev\deps\dioxus_core_macro-d971bad585a994ec.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\component.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\props\mod.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\utils.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\../README.md
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\admin-frontend\target\wasm-dev\deps\dioxus_core_macro-d971bad585a994ec.dll: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\component.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\props\mod.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\utils.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\../README.md
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\component.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\props\mod.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\utils.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\dioxus-core-macro-0.5.6\src\../README.md:

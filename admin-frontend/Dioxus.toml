@@ -1,0 +1,18 @@
+[application]
+name = "hyperlocal-admin-frontend"
+default_platform = "web"
+
+[web.app]
+title = "HyperLocal Admin"
+
+[web.watcher]
+reload_html = true
+watch_path = ["src"]
+
+[web.resource]
+style = []
+script = []
+
+[web.resource.dev]
+style = []
+script = []

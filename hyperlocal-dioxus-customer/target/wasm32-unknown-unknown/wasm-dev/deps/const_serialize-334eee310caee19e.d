@@ -1,0 +1,10 @@
+D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm32-unknown-unknown\wasm-dev\deps\const_serialize-334eee310caee19e.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_buffers.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_vec.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\../README.md
+
+D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm32-unknown-unknown\wasm-dev\deps\libconst_serialize-334eee310caee19e.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_buffers.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_vec.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\../README.md
+
+D:\projects\Rust_React_MultiVendor\6mart\hyperlocal-dioxus\target\wasm32-unknown-unknown\wasm-dev\deps\libconst_serialize-334eee310caee19e.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_buffers.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_vec.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\../README.md
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_buffers.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\const_vec.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\const-serialize-0.7.2\src\../README.md:

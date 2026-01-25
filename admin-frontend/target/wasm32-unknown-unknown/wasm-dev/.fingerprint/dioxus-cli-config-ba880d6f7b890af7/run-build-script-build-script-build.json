@@ -1,0 +1,1 @@
+{"rustc":2490638836439573635,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[15987164384069655691,"build_script_build",false,9957579959061727852]],"local":[{"RerunIfEnvChanged":{"var":"DIOXUS_CONFIG","val":null}}],"rustflags":["--cfg","getrandom_backend=\"wasm_js\""],"config":0,"compile_kind":0}

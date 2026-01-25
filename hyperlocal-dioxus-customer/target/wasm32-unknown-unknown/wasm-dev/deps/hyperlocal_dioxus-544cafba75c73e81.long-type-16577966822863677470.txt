@@ -1,0 +1,1 @@
+for<'a> fn(&'a dioxus_core::scopes::Scoped<'a, IconProps<'a, _>>) -> std::option::Option<dioxus_core::nodes::VNode<'a>> {Icon::<_>}

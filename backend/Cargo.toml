@@ -1,0 +1,58 @@
+[package]
+name = "hyperlocal-admin"
+version = "1.0.0"
+edition = "2021"
+description = "HyperLocal Multi-Vendor eCommerce Admin Backend - Rust Port"
+
+[dependencies]
+# Web Framework
+axum = { version = "0.7", features = ["macros", "multipart"] }
+axum-extra = { version = "0.9", features = ["cookie", "typed-header"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "fs", "trace"] }
+tower-sessions = "0.12"
+tower-sessions-redis-store = "0.11"
+
+# Async Runtime
+tokio = { version = "1", features = ["full"] }
+
+# Database - Diesel with MySQL
+diesel = { version = "2.1", features = ["mysql", "r2d2", "chrono", "serde_json", "uuid", "numeric", "128-column-tables"] }
+diesel_migrations = "2.1"
+r2d2 = "0.8"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Authentication & Security
+argon2 = "0.5"
+rand = "0.8"
+jsonwebtoken = "9"
+
+# Validation
+validator = { version = "0.16", features = ["derive"] }
+
+# Date/Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# UUID
+uuid = { version = "1", features = ["v4", "serde"] }
+
+# Environment
+dotenvy = "0.15"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error Handling
+thiserror = "1"
+anyhow = "1"
+
+# Decimal for money
+rust_decimal = { version = "1", features = ["db-diesel2-mysql", "serde"] }
+
+# Async traits
+async-trait = "0.1"
+

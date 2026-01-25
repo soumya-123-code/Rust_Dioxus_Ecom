@@ -1,0 +1,10 @@
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\manganis-1fefa9610f0dcf9b.d: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\hash.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\macro_helpers.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\../README.md
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libmanganis-1fefa9610f0dcf9b.rlib: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\hash.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\macro_helpers.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\../README.md
+
+D:\projects\Rust_React_MultiVendor\6mart\rust_admin_project\hyperlocal-dioxus-customer\target\wasm32-unknown-unknown\wasm-dev\deps\libmanganis-1fefa9610f0dcf9b.rmeta: C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\lib.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\hash.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\macro_helpers.rs C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\../README.md
+
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\lib.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\hash.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\macro_helpers.rs:
+C:\Users\SOUMAY\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\manganis-0.6.2\src\../README.md:

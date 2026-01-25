@@ -1,0 +1,1 @@
+fn(IconProps<_>) -> Result<dioxus_core::nodes::VNode, dioxus_core::render_error::RenderError> {Icon::<_>}
