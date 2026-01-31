@@ -2,14 +2,17 @@ mod api;
 mod components;
 mod pages;
 mod state;
+mod services;
+mod types;
+mod utils;
+mod hooks;
 
 use dioxus::prelude::*;
-use dioxus_router::prelude::*;
 use pages::*;
-use state::{AuthState, SidebarState};
+use state::{AuthState, SidebarState, ThemeState};
 
 #[derive(Clone, Routable, PartialEq)]
-enum Route {
+pub enum Route {
     #[route("/")]
     Home {},
     #[route("/login")]
@@ -22,6 +25,8 @@ enum Route {
     CategoryDetail { id: u64 },
     #[route("/brands")]
     Brands {},
+    #[route("/attributes")]
+    Attributes {},
     #[route("/products")]
     Products {},
     #[route("/products/:id")]
@@ -48,6 +53,10 @@ enum Route {
     Settings {},
     #[route("/roles")]
     Roles {},
+    #[route("/users")]
+    Users {},
+    #[route("/users/:id")]
+    UserDetail { id: String },
     #[route("/system-users")]
     SystemUsers {},
     #[route("/tax-rates")]
@@ -70,6 +79,14 @@ enum Route {
     SupportTickets {},
     #[route("/refunds")]
     Refunds {},
+    #[route("/commission-config")]
+    CommissionConfig {},
+    #[route("/search")]
+    SearchPage {},
+    #[route("/activity-logs")]
+    ActivityLogs {},
+    #[route("/financial-reports")]
+    FinancialReports {},
 }
 
 fn main() {
@@ -80,8 +97,18 @@ fn main() {
 fn App() -> Element {
     use_context_provider(|| Signal::new(AuthState::default()));
     use_context_provider(|| Signal::new(SidebarState::default()));
+    let theme_state = use_context_provider(|| Signal::new(ThemeState::default()));
+    
+    // Apply initial theme
+    use_effect(move || {
+        theme_state.read().apply_theme();
+    });
 
     rsx! {
+        // Global styles
+        document::Link { rel: "stylesheet", href: "/styles/main.css" }
+        document::Link { rel: "stylesheet", href: "/styles/utilities.css" }
+        document::Link { rel: "stylesheet", href: "/styles/variables.css" }
         Router::<Route> {}
     }
 }
