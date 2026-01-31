@@ -1,7 +1,7 @@
 use chrono::NaiveDateTime;
 use diesel::prelude::*;
-use rust_decimal::Decimal;
 use serde::{Deserialize, Serialize};
+use serde_json::Value as JsonValue;
 
 use crate::schema::users;
 
@@ -10,75 +10,87 @@ use crate::schema::users;
 #[diesel(check_for_backend(diesel::mysql::Mysql))]
 pub struct User {
     pub id: u64,
-    pub name: String,
+    pub uuid: String,
     pub email: String,
     pub email_verified_at: Option<NaiveDateTime>,
+    pub phone: Option<String>,
+    pub phone_verified_at: Option<NaiveDateTime>,
     pub password: String,
     pub remember_token: Option<String>,
-    pub mobile: String,
+    pub first_name: String,
+    pub last_name: Option<String>,
+    pub avatar: Option<String>,
+    pub date_of_birth: Option<chrono::NaiveDate>,
+    pub gender: Option<String>,
+    pub language: Option<String>,
+    pub timezone: Option<String>,
     pub referral_code: Option<String>,
-    pub friends_code: Option<String>,
-    pub reward_points: Decimal,
-    pub status: String,
-    pub access_panel: Option<String>,
-    pub iso_2: Option<String>,
-    pub country: Option<String>,
+    pub referred_by: Option<u64>,
+    pub status: Option<String>,
+    pub last_login_at: Option<NaiveDateTime>,
+    pub last_login_ip: Option<String>,
+    pub fcm_token: Option<String>,
+    pub device_type: Option<String>,
+    pub metadata: Option<String>,
     pub deleted_at: Option<NaiveDateTime>,
-    pub created_at: Option<NaiveDateTime>,
-    pub updated_at: Option<NaiveDateTime>,
+    pub created_at: NaiveDateTime,
+    pub updated_at: NaiveDateTime,
 }
 
 #[derive(Debug, Clone, Insertable, Deserialize)]
 #[diesel(table_name = users)]
 pub struct NewUser {
-    pub name: String,
+    pub uuid: String,
     pub email: String,
     pub password: String,
-    pub mobile: String,
+    pub phone: Option<String>,
+    pub first_name: String,
+    pub last_name: Option<String>,
     pub referral_code: Option<String>,
-    pub friends_code: Option<String>,
-    pub reward_points: Decimal,
-    pub status: String,
-    pub access_panel: Option<String>,
-    pub iso_2: Option<String>,
-    pub country: Option<String>,
+    pub referred_by: Option<u64>,
 }
 
-#[derive(Debug, Clone, AsChangeset, Deserialize)]
+#[derive(Debug, Clone, Default, AsChangeset, Deserialize)]
 #[diesel(table_name = users)]
 pub struct UpdateUser {
-    pub name: Option<String>,
     pub email: Option<String>,
-    pub password: Option<String>,
-    pub mobile: Option<String>,
+    pub phone: Option<String>,
+    pub first_name: Option<String>,
+    pub last_name: Option<String>,
+    pub avatar: Option<String>,
+    pub date_of_birth: Option<chrono::NaiveDate>,
+    pub gender: Option<String>,
+    pub language: Option<String>,
+    pub timezone: Option<String>,
     pub status: Option<String>,
-    pub access_panel: Option<String>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UserResponse {
     pub id: u64,
-    pub name: String,
+    pub uuid: String,
     pub email: String,
-    pub mobile: String,
+    pub phone: Option<String>,
+    pub first_name: String,
+    pub last_name: Option<String>,
+    pub avatar: Option<String>,
     pub referral_code: Option<String>,
-    pub reward_points: Decimal,
-    pub status: String,
-    pub access_panel: Option<String>,
-    pub created_at: Option<NaiveDateTime>,
+    pub status: Option<String>,
+    pub created_at: NaiveDateTime,
 }
 
 impl From<User> for UserResponse {
     fn from(user: User) -> Self {
         Self {
             id: user.id,
-            name: user.name,
+            uuid: user.uuid,
             email: user.email,
-            mobile: user.mobile,
+            phone: user.phone,
+            first_name: user.first_name,
+            last_name: user.last_name,
+            avatar: user.avatar,
             referral_code: user.referral_code,
-            reward_points: user.reward_points,
             status: user.status,
-            access_panel: user.access_panel,
             created_at: user.created_at,
         }
     }

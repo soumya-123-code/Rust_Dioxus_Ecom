@@ -5,6 +5,7 @@ use axum::{
 };
 use diesel::prelude::*;
 use serde::{Deserialize, Serialize};
+use uuid::Uuid;
 
 use crate::models::{User, UserResponse, NewUser, UpdateUser};
 use argon2::{
@@ -35,6 +36,7 @@ pub struct ListParams {
     pub page: Option<i64>,
     pub per_page: Option<i64>,
     pub search: Option<String>,
+    pub status: Option<String>,
 }
 
 #[derive(Debug, Serialize)]
@@ -61,14 +63,12 @@ pub async fn list(
     let offset = (page - 1) * per_page;
 
     let total: i64 = users::table
-        .filter(users::access_panel.eq("admin"))
         .filter(users::deleted_at.is_null())
         .count()
         .get_result(&mut conn)
         .unwrap_or(0);
 
     let results: Vec<User> = users::table
-        .filter(users::access_panel.eq("admin"))
         .filter(users::deleted_at.is_null())
         .order(users::created_at.desc())
         .limit(per_page)
@@ -78,6 +78,61 @@ pub async fn list(
             (
                 StatusCode::INTERNAL_SERVER_ERROR,
                 Json(ErrorResponse { message: "Failed to fetch system users".to_string() }),
+            )
+        })?;
+
+    let data: Vec<UserResponse> = results.into_iter().map(UserResponse::from).collect();
+
+    Ok(Json(PaginatedResponse {
+        data,
+        total,
+        page,
+        per_page,
+    }))
+}
+
+pub async fn datatable(
+    State(state): State<AppState>,
+    Query(params): Query<ListParams>,
+) -> Result<Json<PaginatedResponse<UserResponse>>, (StatusCode, Json<ErrorResponse>)> {
+    let mut conn = state.db_pool.get().map_err(|_| {
+        (
+            StatusCode::INTERNAL_SERVER_ERROR,
+            Json(ErrorResponse { message: "Database connection failed".to_string() }),
+        )
+    })?;
+
+    let page = params.page.unwrap_or(1);
+    let per_page = params.per_page.unwrap_or(10);
+    let offset = (page - 1) * per_page;
+
+    let mut query = users::table
+        .filter(users::deleted_at.is_null())
+        .into_boxed();
+
+    let mut count_query = users::table
+        .filter(users::deleted_at.is_null())
+        .into_boxed();
+
+    if let Some(status) = &params.status {
+        query = query.filter(users::status.eq(status));
+        count_query = count_query.filter(users::status.eq(status));
+    }
+
+    let total: i64 = count_query
+        .count()
+        .get_result(&mut conn)
+        .unwrap_or(0);
+
+    let results: Vec<User> = query
+        .order(users::created_at.desc())
+        .limit(per_page)
+        .offset(offset)
+        .load(&mut conn)
+        .map_err(|_| {
+            (
+                StatusCode::INTERNAL_SERVER_ERROR,
+                Json(ErrorResponse { message: "Failed to fetch users".to_string() }),
             )
         })?;
 
@@ -104,7 +159,6 @@ pub async fn show(
 
     let user: Option<User> = users::table
         .find(id)
-        .filter(users::access_panel.eq("admin"))
         .filter(users::deleted_at.is_null())
         .select(User::as_select())
         .first(&mut conn)
@@ -160,17 +214,14 @@ pub async fn create(
         .to_string();
 
     let new_user = NewUser {
-        name: payload.name,
-        email: payload.email,
+        uuid: uuid::Uuid::new_v4().to_string(),
+        email: payload.email.clone(),
         password: password_hash,
-        mobile: payload.mobile,
+        phone: Some(payload.mobile.clone()),
+        first_name: payload.name.clone(),
+        last_name: None,
         referral_code: None,
-        friends_code: None,
-        reward_points: Decimal::new(0, 0),
-        status: "active".to_string(),
-        access_panel: Some("admin".to_string()),
-        iso_2: None,
-        country: None,
+        referred_by: None,
     };
 
     diesel::insert_into(users::table)
@@ -230,12 +281,16 @@ pub async fn update(
     };
 
     let update_data = UpdateUser {
-        name: payload.name,
         email: payload.email,
-        password: password_hash,
-        mobile: payload.mobile,
+        phone: payload.mobile,
+        first_name: payload.name,
+        last_name: None,
+        avatar: None,
+        date_of_birth: None,
+        gender: None,
+        language: None,
+        timezone: None,
         status: payload.status,
-        access_panel: None,
     };
 
     diesel::update(users::table.find(id))
@@ -251,6 +306,45 @@ pub async fn update(
     Ok(Json(SuccessResponse {
         success: true,
         message: "User updated successfully".to_string(),
+        data: None,
+    }))
+}
+
+#[derive(Debug, Deserialize)]
+pub struct UpdateStatusRequest {
+    pub status: String,
+}
+
+pub async fn update_status(
+    State(state): State<AppState>,
+    Path(id): Path<u64>,
+    Json(payload): Json<UpdateStatusRequest>,
+) -> Result<Json<SuccessResponse>, (StatusCode, Json<ErrorResponse>)> {
+    let mut conn = state.db_pool.get().map_err(|_| {
+        (
+            StatusCode::INTERNAL_SERVER_ERROR,
+            Json(ErrorResponse { message: "Database connection failed".to_string() }),
+        )
+    })?;
+
+    let update_data = UpdateUser {
+        status: Some(payload.status),
+        ..Default::default()
+    };
+
+    diesel::update(users::table.find(id))
+        .set(&update_data)
+        .execute(&mut conn)
+        .map_err(|_| {
+            (
+                StatusCode::INTERNAL_SERVER_ERROR,
+                Json(ErrorResponse { message: "Failed to update user status".to_string() }),
+            )
+        })?;
+
+    Ok(Json(SuccessResponse {
+        success: true,
+        message: "User status updated successfully".to_string(),
         data: None,
     }))
 }

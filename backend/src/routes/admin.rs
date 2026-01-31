@@ -10,12 +10,19 @@ pub fn routes() -> Router<AppState> {
         // Dashboard routes
         .route("/dashboard/stats", get(controllers::dashboard::get_stats))
         .route("/dashboard/chart-data", get(controllers::dashboard::get_chart_data))
+        .route("/dashboard/extended-stats", get(controllers::dashboard::get_extended_stats))
+        .route("/dashboard/order-breakdown", get(controllers::dashboard::get_order_status_breakdown))
+        .route("/dashboard/top-products", get(controllers::dashboard::get_top_products))
+        .route("/dashboard/top-categories", get(controllers::dashboard::get_top_categories))
+        .route("/dashboard/vendor-performance", get(controllers::dashboard::get_vendor_performance))
+        .route("/dashboard/recent-activities", get(controllers::dashboard::get_recent_activities))
         
         // Category routes
         .route("/categories", get(controllers::categories::list))
         .route("/categories", post(controllers::categories::create))
         .route("/categories/datatable", get(controllers::categories::datatable))
         .route("/categories/search", get(controllers::categories::search))
+        .route("/categories/:id/status", put(controllers::categories::update_status))
         .route("/categories/:id", get(controllers::categories::show))
         .route("/categories/:id", put(controllers::categories::update))
         .route("/categories/:id", delete(controllers::categories::delete))
@@ -25,15 +32,29 @@ pub fn routes() -> Router<AppState> {
         .route("/brands", post(controllers::brands::create))
         .route("/brands/datatable", get(controllers::brands::datatable))
         .route("/brands/search", get(controllers::brands::search))
+        .route("/brands/:id/status", put(controllers::brands::update_status))
         .route("/brands/:id", get(controllers::brands::show))
         .route("/brands/:id", put(controllers::brands::update))
         .route("/brands/:id", delete(controllers::brands::delete))
         
+        // Attribute routes
+        .route("/attributes", get(controllers::attributes::list))
+        .route("/attributes", post(controllers::attributes::create))
+        .route("/attributes/datatable", get(controllers::attributes::datatable))
+        .route("/attributes/:id/values", get(controllers::attributes::list_values))
+        .route("/attributes/:id/values", post(controllers::attributes::create_value))
+        .route("/attributes/:id/values/:value_id", delete(controllers::attributes::delete_value))
+        .route("/attributes/:id", get(controllers::attributes::show))
+        .route("/attributes/:id", put(controllers::attributes::update))
+        .route("/attributes/:id", delete(controllers::attributes::delete))
+
         // Product routes
         .route("/products", get(controllers::products::list))
+        .route("/products", post(controllers::products::create))
         .route("/products/datatable", get(controllers::products::datatable))
         .route("/products/search", get(controllers::products::search))
         .route("/products/:id", get(controllers::products::show))
+        .route("/products/:id", put(controllers::products::update))
         .route("/products/:id/verification-status", post(controllers::products::update_verification_status))
         .route("/products/:id/update-status", post(controllers::products::update_status))
         
@@ -52,7 +73,10 @@ pub fn routes() -> Router<AppState> {
         // Order routes
         .route("/orders", get(controllers::orders::list))
         .route("/orders/datatable", get(controllers::orders::datatable))
+        .route("/orders/stats", get(controllers::orders::get_order_stats))
+        .route("/orders/bulk-update", post(controllers::orders::bulk_update_status))
         .route("/orders/:id", get(controllers::orders::show))
+        .route("/orders/:id/timeline", get(controllers::orders::get_order_timeline))
         .route("/orders/:id/:status", post(controllers::orders::update_status))
         
         // Delivery Zone routes
@@ -76,14 +100,33 @@ pub fn routes() -> Router<AppState> {
         .route("/banners/:id", get(controllers::banners::show))
         .route("/banners/:id", put(controllers::banners::update))
         .route("/banners/:id", delete(controllers::banners::delete))
-        
-        // Promo routes
-        .route("/promos", get(controllers::promos::list))
-        .route("/promos", post(controllers::promos::create))
-        .route("/promos/datatable", get(controllers::promos::datatable))
-        .route("/promos/:id", get(controllers::promos::show))
-        .route("/promos/:id", put(controllers::promos::update))
-        .route("/promos/:id", delete(controllers::promos::delete))
+
+        // Coupon routes
+        .route("/coupons", get(controllers::coupons::list))
+        .route("/coupons", post(controllers::coupons::create))
+        .route("/coupons/datatable", get(controllers::coupons::datatable))
+        .route("/coupons/search", get(controllers::coupons::search))
+        .route("/coupons/:id", get(controllers::coupons::show))
+        .route("/coupons/:id", put(controllers::coupons::update))
+        .route("/coupons/:id", delete(controllers::coupons::delete))
+
+        // Pages/CMS routes
+        .route("/pages", get(controllers::pages::list))
+        .route("/pages", post(controllers::pages::create))
+        .route("/pages/datatable", get(controllers::pages::datatable))
+        .route("/pages/search", get(controllers::pages::search))
+        .route("/pages/slug/:slug", get(controllers::pages::show_by_slug))
+        .route("/pages/:id", get(controllers::pages::show))
+        .route("/pages/:id", put(controllers::pages::update))
+        .route("/pages/:id", delete(controllers::pages::delete))
+
+        // Promo routes - COMMENTED OUT (no promos table in new schema)
+        // .route("/promos", get(controllers::promos::list))
+        // .route("/promos", post(controllers::promos::create))
+        // .route("/promos/datatable", get(controllers::promos::datatable))
+        // .route("/promos/:id", get(controllers::promos::show))
+        // .route("/promos/:id", put(controllers::promos::update))
+        // .route("/promos/:id", delete(controllers::promos::delete))
         
         // Settings routes
         .route("/settings", get(controllers::settings::list))
@@ -105,6 +148,15 @@ pub fn routes() -> Router<AppState> {
         .route("/permissions", get(controllers::permissions::list))
         .route("/permissions/assign", post(controllers::permissions::store))
         
+        // Users routes (alias for system-users for frontend compatibility)
+        .route("/users", get(controllers::system_users::list))
+        .route("/users", post(controllers::system_users::create))
+        .route("/users/datatable", get(controllers::system_users::datatable))
+        .route("/users/:id", get(controllers::system_users::show))
+        .route("/users/:id", put(controllers::system_users::update))
+        .route("/users/:id/status", put(controllers::system_users::update_status))
+        .route("/users/:id", delete(controllers::system_users::delete))
+
         // System Users routes
         .route("/system-users", get(controllers::system_users::list))
         .route("/system-users", post(controllers::system_users::create))
@@ -152,6 +204,15 @@ pub fn routes() -> Router<AppState> {
         .route("/delivery-boy-withdrawals", get(controllers::withdrawals::delivery_boy_list))
         .route("/delivery-boy-withdrawals/:id", patch(controllers::withdrawals::update_delivery_boy_withdrawal))
 
+        // Commission Configuration routes
+        .route("/commission-config", get(controllers::commission_config::get_all_commission_configs))
+        .route("/commission-config/vendor/:id", get(controllers::commission_config::get_vendor_commission))
+        .route("/commission-config/vendor", post(controllers::commission_config::upsert_vendor_commission))
+        .route("/commission-config/global", get(controllers::commission_config::get_global_settings))
+        .route("/commission-config/global", put(controllers::commission_config::update_global_settings))
+        .route("/commission-config/history", get(controllers::commission_config::get_commission_history))
+        .route("/commission-config/summary", get(controllers::commission_config::get_commission_summary))
+
         // System Update routes
         .route("/system-updates", get(controllers::system_updates::list))
         .route("/system-updates", post(controllers::system_updates::store))
@@ -170,4 +231,27 @@ pub fn routes() -> Router<AppState> {
         // Refund routes
         .route("/refunds", get(controllers::refunds::list))
         .route("/refunds/:id/status", post(controllers::refunds::update_status))
+
+        // Global Search routes
+        .route("/search", get(controllers::global_search::global_search))
+        .route("/search/suggestions", get(controllers::global_search::search_suggestions))
+        .route("/search/entity", get(controllers::global_search::search_entity))
+        .route("/search/popular", get(controllers::global_search::get_popular_searches))
+
+        // Activity Logs routes
+        .route("/activity-logs", get(controllers::activity_logs::list_activity_logs))
+        .route("/activity-logs/summary", get(controllers::activity_logs::get_activity_summary))
+        .route("/activity-logs/chart", get(controllers::activity_logs::get_activity_chart))
+        .route("/activity-logs/filters", get(controllers::activity_logs::get_filter_options))
+        .route("/activity-logs/:id", get(controllers::activity_logs::get_activity_log))
+        .route("/activity-logs", post(controllers::activity_logs::log_activity))
+        
+        // Financial Reports routes
+        .route("/reports/financial/overview", get(controllers::financial_reports::get_financial_overview))
+        .route("/reports/financial/sales", get(controllers::financial_reports::get_sales_report))
+        .route("/reports/financial/revenue-breakdown", get(controllers::financial_reports::get_revenue_breakdown))
+        .route("/reports/financial/commission", get(controllers::financial_reports::get_commission_report))
+        .route("/reports/financial/top-performers", get(controllers::financial_reports::get_top_performers))
+        .route("/reports/financial/payment-analysis", get(controllers::financial_reports::get_payment_analysis))
+        .route("/reports/financial/export", get(controllers::financial_reports::export_financial_data))
 }
