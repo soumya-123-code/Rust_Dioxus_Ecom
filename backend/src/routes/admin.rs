@@ -55,6 +55,10 @@ pub fn routes() -> Router<AppState> {
         .route("/products/search", get(controllers::products::search))
         .route("/products/:id", get(controllers::products::show))
         .route("/products/:id", put(controllers::products::update))
+        .route("/products/:id", delete(controllers::products::delete))
+        .route("/products/:id/status", put(controllers::products::update_status))
+        .route("/products/:id/verification", put(controllers::products::update_verification_status))
+        // Legacy routes for backward compatibility
         .route("/products/:id/verification-status", post(controllers::products::update_verification_status))
         .route("/products/:id/update-status", post(controllers::products::update_status))
         
