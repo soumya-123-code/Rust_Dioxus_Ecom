@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laza UI Kit - Design Preview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Laza Colors */
+            --primary: #9775FA;
+            --primary-dark: #7950F2;
+            --primary-light: #B197FC;
+            --secondary: #FF6B6B;
+            --success: #34C759;
+            --warning: #FFB800;
+            --error: #FF3B30;
+            --background: #FAFAFA;
+            --surface: #FFFFFF;
+            --text-primary: #1A1A1A;
+            --text-secondary: #8E8E93;
+            --text-tertiary: #C7C7CC;
+            --border: #E5E5E5;
+            --divider: #F2F2F7;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .section {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .color-item {
+            text-align: center;
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 100px;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .color-value {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-family: monospace;
+        }
+
+        /* Buttons */
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(151, 117, 250, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(151, 117, 250, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(151, 117, 250, 0.1);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--primary);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(151, 117, 250, 0.1);
+        }
+
+        .btn-danger {
+            background: var(--error);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 18px;
+        }
+
+        /* Inputs */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(151, 117, 250, 0.1);
+        }
+
+        .input-filled {
+            background: #F5F5F5;
+            border: 2px solid transparent;
+        }
+
+        .input-filled:focus {
+            background: white;
+            border-color: var(--primary);
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-with-icon input {
+            padding-left: 48px;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .card-image {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: #F0F0F0;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .card-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .card-price-old {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .badge-discount {
+            background: linear-gradient(135deg, var(--secondary) 0%, #FA5252 100%);
+        }
+
+        .badge-new {
+            background: linear-gradient(135deg, var(--success) 0%, #2DA44E 100%);
+        }
+
+        /* Login Screen Preview */
+        .phone-mockup {
+            max-width: 375px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 40px;
+            padding: 60px 24px 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 32px;
+            cursor: pointer;
+        }
+
+        .welcome-text {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .subtitle-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .social-login {
+            display: flex;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .social-btn {
+            flex: 1;
+            height: 56px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 32px 0;
+            color: var(--text-tertiary);
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--divider);
+        }
+
+        .divider span {
+            padding: 0 16px;
+        }
+
+        .typography-sample {
+            margin-bottom: 16px;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            display: flex;
+            justify-content: space-around;
+            padding: 16px;
+            background: white;
+            border-top: 1px solid var(--border);
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item.active {
+            color: var(--primary);
+        }
+
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 24px;
+            }
+
+            .color-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎨 Laza UI Kit Implementation</h1>
+            <p>Premium Ecommerce Mobile App Design System</p>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="section">
+            <h2 class="section-title">Color Palette</h2>
+            <div class="color-grid">
+                <div class="color-item">
+                    <div class="color-swatch" style="background: linear-gradient(135deg, #9775FA 0%, #7950F2 100%);"></div>
+                    <div class="color-name">Primary</div>
+                    <div class="color-value">#9775FA</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #FF6B6B;"></div>
+                    <div class="color-name">Secondary</div>
+                    <div class="color-value">#FF6B6B</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #34C759;"></div>
+                    <div class="color-name">Success</div>
+                    <div class="color-value">#34C759</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #FFB800;"></div>
+                    <div class="color-name">Warning</div>
+                    <div class="color-value">#FFB800</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #FF3B30;"></div>
+                    <div class="color-name">Error</div>
+                    <div class="color-value">#FF3B30</div>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #1A1A1A;"></div>
+                    <div class="color-name">Text Primary</div>
+                    <div class="color-value">#1A1A1A</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="section">
+            <h2 class="section-title">Typography</h2>
+            <div class="typography-sample" style="font-size: 32px; font-weight: 700;">Heading 1 - 32px Bold</div>
+            <div class="typography-sample" style="font-size: 28px; font-weight: 700;">Heading 2 - 28px Bold</div>
+            <div class="typography-sample" style="font-size: 24px; font-weight: 600;">Heading 3 - 24px Semibold</div>
+            <div class="typography-sample" style="font-size: 16px; font-weight: 400;">Body Large - 16px Regular</div>
+            <div class="typography-sample" style="font-size: 14px; font-weight: 400;">Body - 14px Regular</div>
+            <div class="typography-sample" style="font-size: 12px; font-weight: 400; color: var(--text-secondary);">Caption - 12px Regular</div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="section">
+            <h2 class="section-title">Buttons</h2>
+            <div class="button-grid">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-ghost">Ghost Button</button>
+                <button class="btn btn-danger">Danger Button</button>
+                <button class="btn btn-success">Success Button</button>
+            </div>
+
+            <h3 class="section-subtitle">Button Sizes</h3>
+            <div class="button-grid">
+                <button class="btn btn-primary btn-sm">Small</button>
+                <button class="btn btn-primary">Medium</button>
+                <button class="btn btn-primary btn-lg">Large</button>
+            </div>
+        </div>
+
+        <!-- Input Fields -->
+        <div class="section">
+            <h2 class="section-title">Input Fields</h2>
+            
+            <div class="input-group">
+                <label class="input-label">Outlined Input</label>
+                <input type="text" class="input" placeholder="Enter your email">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Filled Input (Laza Style)</label>
+                <input type="text" class="input input-filled" placeholder="Enter your password">
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Input with Icon</label>
+                <div class="input-with-icon">
+                    <span class="input-icon">📧</span>
+                    <input type="text" class="input input-filled" placeholder="Enter your email">
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Cards -->
+        <div class="section">
+            <h2 class="section-title">Product Cards</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div style="position: relative;">
+                        <div class="card-image"></div>
+                        <span class="badge badge-discount" style="position: absolute; top: 12px; left: 12px;">-20%</span>
+                        <button style="position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%; background: white; border: none; cursor: pointer;">❤️</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Nike Air Max 270</div>
+                        <div style="display: flex; align-items: center; gap: 4px; margin: 8px 0;">
+                            <span style="color: #FFB800;">⭐⭐⭐⭐⭐</span>
+                            <span style="font-size: 14px; color: var(--text-secondary);">4.5</span>
+                        </div>
+                        <div>
+                            <span class="card-price">₹3,999</span>
+                            <span class="card-price-old">₹4,999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div style="position: relative;">
+                        <div class="card-image"></div>
+                        <span class="badge badge-new" style="position: absolute; top: 12px; left: 12px;">NEW</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-title">Adidas Ultraboost</div>
+                        <div style="display: flex; align-items: center; gap: 4px; margin: 8px 0;">
+                            <span style="color: #FFB800;">⭐⭐⭐⭐⭐</span>
+                            <span style="font-size: 14px; color: var(--text-secondary);">5.0</span>
+                        </div>
+                        <div>
+                            <span class="card-price">₹5,499</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <div class="card-title">Puma RS-X</div>
+                        <div style="display: flex; align-items: center; gap: 4px; margin: 8px 0;">
+                            <span style="color: #FFB800;">⭐⭐⭐⭐</span>
+                            <span style="font-size: 14px; color: var(--text-secondary);">4.2</span>
+                        </div>
+                        <div>
+                            <span class="card-price">₹2,999</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Screen Preview -->
+        <div class="section">
+            <h2 class="section-title">Login Screen Preview</h2>
+            <div class="phone-mockup">
+                <div class="back-btn">←</div>
+                
+                <h1 class="welcome-text">Welcome</h1>
+                <p class="subtitle-text">Please login or sign up to continue our app</p>
+
+                <div class="input-group">
+                    <label class="input-label">Email or Username</label>
+                    <div class="input-with-icon">
+                        <span class="input-icon">👤</span>
+                        <input type="text" class="input input-filled" placeholder="Enter your email">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Password</label>
+                    <div class="input-with-icon">
+                        <span class="input-icon">🔒</span>
+                        <input type="password" class="input input-filled" placeholder="Enter your password">
+                    </div>
+                    <div style="text-align: right; margin-top: 8px;">
+                        <a href="#" style="color: var(--error); font-size: 14px; font-weight: 600; text-decoration: none;">Forgot Password?</a>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--primary);">
+                        <span style="font-size: 14px; font-weight: 500;">Remember me</span>
+                    </label>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%;">Login</button>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="social-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                        </svg>
+                    </button>
+                    <button class="social-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <p style="text-align: center; margin-top: 24px;">
+                    <span style="color: var(--text-secondary);">Don't have an account? </span>
+                    <a href="#" style="color: var(--text-primary); font-weight: 700; text-decoration: none;">Sign up</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="section">
+            <h2 class="section-title">Bottom Navigation</h2>
+            <div class="nav-bar">
+                <div class="nav-item active">
+                    <div class="nav-icon">🏠</div>
+                    <span>Home</span>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">📱</div>
+                    <span>Shop</span>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">🛒</div>
+                    <span>Cart</span>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">❤️</div>
+                    <span>Wishlist</span>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">👤</div>
+                    <span>Account</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin-top: 60px; padding: 40px 0; border-top: 1px solid var(--divider);">
+            <p style="color: var(--text-secondary); margin-bottom: 8px;">Laza UI Kit Implementation for HyperLocal Dioxus Customer App</p>
+            <p style="font-size: 14px; color: var(--text-tertiary);">Built with Dioxus (Rust) • Design inspired by Laza Ecommerce UI Kit</p>
+        </div>
+    </div>
+</body>
+</html>
